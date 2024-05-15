@@ -43,6 +43,6 @@ variable "enable_private_nodes" {
 
 variable "enable_private_endpoint" {
   type        = bool
-  default     = true
+  default     = false
 }
 
