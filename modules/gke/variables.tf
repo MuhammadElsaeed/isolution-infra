@@ -5,7 +5,7 @@ variable "cluster_name" {
 
 variable "zone" {
   type        = string
-  default = "us-east1-a"
+  default = "us-east1-b"
 }
 
 variable "network" {
@@ -46,3 +46,14 @@ variable "enable_private_endpoint" {
   default     = false
 }
 
+variable "master_ipv4_cidr_block" {
+  type        = string
+}
+
+variable "cluster_ipv4_cidr_block" {
+  type        = string
+}
+
+variable "services_ipv4_cidr_block" {
+  type = string
+}

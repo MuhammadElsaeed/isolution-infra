@@ -9,7 +9,7 @@ resource "google_container_cluster" "primary" {
   network            = var.network
   subnetwork         = var.subnetwork
   initial_node_count = var.initial_node_count
-
+  
   node_config {
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform",
@@ -22,6 +22,13 @@ resource "google_container_cluster" "primary" {
   private_cluster_config {
     enable_private_nodes    = var.enable_private_nodes
     enable_private_endpoint = var.enable_private_endpoint
+    master_ipv4_cidr_block = var.master_ipv4_cidr_block
+
+  }
+  ip_allocation_policy {
+    cluster_ipv4_cidr_block = var.cluster_ipv4_cidr_block
+    services_ipv4_cidr_block = var.services_ipv4_cidr_block
+    
   }
 
   cluster_autoscaling {
