@@ -5,12 +5,12 @@ variable "project_id" {
 
 variable "region" {
   type = string
-  default = "us-east5"
+  default = "us-east1"
 }
 
 variable "zone" {
   type = string
-  default = "us-east5-a"
+  default = "us-east1-a"
 }
 
 variable "machine_type" {

@@ -5,7 +5,7 @@ variable "cluster_name" {
 
 variable "zone" {
   type        = string
-  default = "us-east5-a"
+  default = "us-east1-a"
 }
 
 variable "network" {
@@ -33,7 +33,7 @@ variable "spot_instances" {
 
 variable "machine_type" {
   type        = string
-  default = "e2-medium"
+  default = "e2-micro"
 }
 
 variable "enable_private_nodes" {
@@ -46,7 +46,3 @@ variable "enable_private_endpoint" {
   default     = true
 }
 
-variable "autoscaling_enabled" {
-  type        = bool
-  default     = false
-}

@@ -25,7 +25,6 @@ resource "google_container_cluster" "primary" {
   }
 
   cluster_autoscaling {
-    enabled = var.autoscaling_enabled
   }
 
   depends_on = [google_project_service.kubernetes]
