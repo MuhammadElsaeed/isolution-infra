@@ -5,6 +5,7 @@ resource "google_project_service" "compute" {
 # Create a VPC network
 resource "google_compute_network" "vpc_network" {
   name = "apps-network"
+  auto_create_subnetworks = false
   depends_on = [ google_project_service.compute ]
 }
 
